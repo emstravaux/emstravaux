@@ -1,188 +1,479 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>EMS Travaux - Second œuvre Marseille</title>
+<title>EMS Travaux - Entreprise Tout Corps d'État PACA</title>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial, sans-serif;
-color:#222;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial', sans-serif;
 }
 
+body{
+background:#ffffff;
+color:#1d1d1d;
+}
+
+/* HEADER */
+
 header{
-background:#0b1f33;
-color:white;
-padding:25px 60px;
+height:95px;
+background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:15px 8%;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.logo{
-font-size:32px;
-font-weight:bold;
+.logo img{
+height:75px;
 }
 
 nav a{
-color:white;
-margin-left:25px;
 text-decoration:none;
+color:#004b7a;
+margin-left:35px;
+font-weight:bold;
+font-size:15px;
 }
 
+nav a:hover{
+color:#6aa982;
+}
+
+/* ACCUEIL */
+
 .hero{
-height:600px;
-background:linear-gradient(
-rgba(0,0,0,0.55),
-rgba(0,0,0,0.55)
+height:750px;
+background:
+linear-gradient(
+rgba(0,35,60,0.65),
+rgba(0,35,60,0.65)
 ),
-url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c');
 background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
+padding:0 8%;
 color:white;
-padding:60px;
+}
+
+.hero-content{
+max-width:800px;
 }
 
 .hero h1{
-font-size:55px;
-max-width:700px;
+font-size:58px;
+margin-bottom:25px;
+letter-spacing:1px;
+}
+
+.hero h2{
+font-size:28px;
+color:#9bc9aa;
+margin-bottom:25px;
 }
 
 .hero p{
-font-size:22px;
+font-size:21px;
+line-height:1.6;
+margin-bottom:35px;
 }
 
 .btn{
-background:#d6b46a;
-padding:15px 25px;
-display:inline-block;
-margin-top:20px;
-color:black;
+background:#6aa982;
+padding:18px 30px;
+border-radius:3px;
+color:white;
 text-decoration:none;
 font-weight:bold;
+margin-right:15px;
+display:inline-block;
 }
+
+.btn2{
+background:white;
+color:#004b7a;
+}
+
+/* SECTIONS */
 
 section{
-padding:70px 60px;
+padding:90px 8%;
 }
 
-.cards{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
+.title{
+text-align:center;
+font-size:38px;
+color:#004b7a;
+margin-bottom:20px;
+}
+
+.subtitle{
+text-align:center;
+max-width:850px;
+margin:auto;
+font-size:18px;
+line-height:1.7;
+margin-bottom:60px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
-background:#f5f5f5;
-padding:30px;
-width:250px;
+background:#f7faf9;
+padding:40px 30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+transition:0.3s;
 }
 
-footer{
-background:#0b1f33;
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#004b7a;
+margin-bottom:15px;
+font-size:22px;
+}
+
+.card p{
+line-height:1.6;
+}
+
+/* BANDEAU */
+
+.banner{
+background:#004b7a;
 color:white;
-padding:30px;
 text-align:center;
+}
+
+.banner h2{
+font-size:36px;
+margin-bottom:20px;
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
-<div class="logo">EMS</div>
+<div class="logo">
+<img src="logo-ems.png.png">
+</div>
+
 
 <nav>
-<a href="#">Accueil</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
+
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
 </header>
 
 
-<div class="hero">
+<div class="hero" id="accueil">
 
-<div>
+<div class="hero-content">
 
-<h1>EMS Travaux, votre spécialiste du second œuvre</h1>
+<h1>EMS Travaux</h1>
+
+<h2>Construire autrement, rénover durablement</h2>
 
 <p>
-Rénovation intérieure, carrelage, peinture et aménagement sur mesure.
+Entreprise tout corps d'état spécialisée dans la rénovation,
+l'aménagement et les travaux du bâtiment en région PACA.
 </p>
 
-<a class="btn" href="tel:0600000000">
-Demander un devis
+
+<a class="btn" href="tel:0686723293">
+Nous appeler
 </a>
 
-</div>
+
+<a class="btn btn2" href="https://wa.me/33686723293">
+WhatsApp
+</a>
+
 
 </div>
 
-
+</div>
 <section>
 
-<h2>Nos prestations</h2>
+<h2 class="title">Nos domaines d'expertise</h2>
 
-<div class="cards">
+<p class="subtitle">
+EMS accompagne les particuliers et les professionnels dans leurs projets de construction,
+rénovation et aménagement avec un suivi complet de A à Z.
+</p>
+
+
+<div class="services">
+
 
 <div class="card">
-<h3>Carrelage & Faïence</h3>
-<p>Pose professionnelle pour vos sols et murs.</p>
+
+<h3>🏠 Rénovation complète</h3>
+
+<p>
+Gestion complète de vos projets de rénovation intérieure,
+transformation d'espaces et remise à neuf.
+</p>
+
 </div>
 
 
 <div class="card">
-<h3>Rénovation complète</h3>
-<p>Transformation et modernisation de vos espaces.</p>
+
+<h3>🔨 Tout corps d'état</h3>
+
+<p>
+Coordination des différents métiers du bâtiment pour une solution clé en main.
+</p>
+
 </div>
 
 
 <div class="card">
-<h3>Peinture & finitions</h3>
-<p>Des finitions propres et de qualité.</p>
+
+<h3>◼ Carrelage & revêtements</h3>
+
+<p>
+Pose de carrelage, faïence, sols et revêtements avec des finitions professionnelles.
+</p>
+
 </div>
 
 
 <div class="card">
-<h3>Second œuvre</h3>
-<p>Solutions adaptées aux particuliers et professionnels.</p>
+
+<h3>🎨 Peinture & finitions</h3>
+
+<p>
+Travaux de peinture intérieure et finitions haut de gamme.
+</p>
+
 </div>
+
+
+<div class="card">
+
+<h3>🧱 Placo & isolation</h3>
+
+<p>
+Création d'espaces, cloisons, doublages et amélioration thermique.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏗 Aménagement intérieur</h3>
+
+<p>
+Des solutions adaptées pour valoriser chaque espace de votre bien.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<section>
 
-<h2>Pourquoi choisir EMS ?</h2>
+<section class="banner">
+
+<h2>Votre projet mérite une réalisation de qualité</h2>
 
 <p>
-✔ Garantie décennale<br>
-✔ Devis gratuit<br>
-✔ Accompagnement personnalisé<br>
-✔ Intervention Marseille et alentours
+Une équipe engagée pour donner vie à vos envies.
 </p>
 
 </section>
+
+
+
+<section>
+
+
+<h2 class="title">Pourquoi choisir EMS ?</h2>
+
+
+<div class="services">
+
+
+<div class="card">
+
+<h3>✔ Garantie décennale</h3>
+
+<p>
+Des travaux réalisés dans le respect des normes professionnelles.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>✔ Accompagnement personnalisé</h3>
+
+<p>
+Un interlocuteur à votre écoute tout au long du chantier.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>✔ Intervention PACA</h3>
+
+<p>
+Nous intervenons auprès des particuliers et professionnels dans toute la région.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<section id="contact">
+
+<h2 class="title">Contactez EMS Travaux</h2>
+
+<p class="subtitle">
+
+📍 Région PACA <br><br>
+
+📞 06.86.72.32.93 <br><br>
+
+✉ contact@emstravaux.com
+
+</p>
+
+
+<center>
+
+<a class="btn" href="tel:0686723293">
+Appeler maintenant
+</a>
+
+
+<a class="btn btn2" href="https://wa.me/33686723293">
+Envoyer un WhatsApp
+</a>
+
+</center>
+
+
+</section>
+
 
 
 <footer>
 
-EMS Travaux © 2026 <br>
-Marseille - Bouches-du-Rhône
+EMS Travaux © 2026 - Construire autrement
 
 </footer>
 
 
+<style>
+
+footer{
+background:#004b7a;
+padding:35px;
+text-align:center;
+color:white;
+font-weight:bold;
+}
+
+
+/* VERSION TELEPHONE */
+
+@media(max-width:800px){
+
+header{
+height:auto;
+display:block;
+text-align:center;
+}
+
+.logo img{
+height:90px;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:block;
+margin:15px;
+}
+
+
+.hero{
+height:650px;
+text-align:center;
+padding:30px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+
+.hero h2{
+font-size:22px;
+}
+
+.btn{
+margin-top:10px;
+}
+
+
+}
+
+</style>
+
+
 </body>
+
 </html>
